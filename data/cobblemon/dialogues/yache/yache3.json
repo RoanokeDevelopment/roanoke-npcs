@@ -1,0 +1,80 @@
+{
+  "escapeAction": "q.dialogue.set_page('quitter')",
+  "speakers": {
+    "mobi": {
+      "name": "Gym Leader Mobi",
+      "face": {
+        "type": "artificial",
+        "modelType": "pokemon",
+        "identifier": "cobblemon:pikachu",
+        "aspects": [
+          "shiny"
+        ]
+      }
+    },
+    "player": {
+      "face": "q.player.face();",
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "intro",
+      "speaker": "mobi",
+      "lines": [ "Welcome to my gym. I hope you brought some warmer garments. Shall we?"],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Yes",
+            "value": "yes",
+            "action": [
+              "v.player_response = '*§oYou ready your Pokéballs§r*';",
+              "v.next_page = 'page1';",
+              "q.dialogue.set_page('player-surrogate');"
+            ]
+          },
+          {
+            "text": "No",
+            "value": "no",
+            "action": [
+              "v.player_response = 'I\\'m not ready..';",
+              "v.next_page = 'quitter';",
+              "q.dialogue.set_page('player-surrogate');"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "player-surrogate",
+      "speaker": "player",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "v.player_response;"
+        }
+      ],
+      "input": "q.dialogue.set_page(v.next_page);"
+    },
+    {
+      "id": "page1",
+      "speaker": "mobi",
+      "input": "q.dialogue.close();",
+      "lines": [
+        "Let me heat you up with this battle!"
+      ]
+    },
+    {
+      "id": "quitter",
+      "speaker": "mobi",
+      "lines": ["Wimping out? Don't be a §lWimpod§r!"],
+      "input": "q.dialogue.close();",
+      "escapeAction": "q.dialogue.close();"
+    }
+  ]
+}

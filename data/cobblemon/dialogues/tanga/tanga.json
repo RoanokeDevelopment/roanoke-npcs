@@ -1,0 +1,51 @@
+{
+  "escapeAction": "q.dialogue.set_page('quitter')",
+  "speakers": {
+    "westin": {
+      "name": "Westin",
+      "face": {
+        "type": "artificial",
+        "modelType": "pokemon",
+        "identifier": "cobblemon:pikachu",
+        "aspects": [
+          "shiny"
+        ]
+      }
+    },
+    "player": {
+      "face": "q.player.face();",
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "westin",
+      "speaker": "westin",
+      "lines": [
+         {
+           "type": "expression",
+           "expression": "'Woah! Heya, ' + q.player.username + '! Enjoying your trek through §lTanga Forest§r? I\\'m out here looking for rare Bug Pokémon to collect! I\\'ve been hunting for a shiny §lHopibug§r for ages now. No dice again, but mark my words, I\\'ll add that bug to my collection one day!'"
+         }
+      ]
+    },
+    {
+      "id": "westin0",
+      "speaker": "westin",
+      "input": "q.dialogue.close();",      
+      "lines": [
+          "I bet I know why you're here, though. You're ready to challenge the §lTanga Town Gym§r! Well, as Gym Leader, I'll gladly accept your challenge. I'm heading back now, so get ready to see the real power of Bug types!"
+      ],
+	  "input": "q.dialogue.close();"
+    },
+    {
+      "id": "quitter",
+      "speaker": "player",
+      "lines": ["What was I supposed to do?!??"],
+      "input": "q.dialogue.close();",
+      "escapeAction": "q.dialogue.close();"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "escapeAction": "q.dialogue.set_page('quitter')",
+  "speakers": {
+    "mobi0": {
+      "name": "[???]",
+      "face": {
+        "type": "artificial",
+        "modelType": "pokemon",
+        "identifier": "cobblemon:pikachu",
+        "aspects": [
+          "shiny"
+        ]
+      }
+    },
+    "mobi": {
+      "name": "Mobi",
+      "face": {
+        "type": "artificial",
+        "modelType": "pokemon",
+        "identifier": "cobblemon:pikachu",
+        "aspects": [
+          "shiny"
+        ]
+      }
+    },
+    "grunt1": {
+      "name": "Grunt 1",
+      "face": {
+        "type": "artificial",
+        "modelType": "pokemon",
+        "identifier": "cobblemon:pikachu",
+        "aspects": [
+          "shiny"
+        ]
+      }
+    },
+    "grunt2": {
+      "name": "Grunt 2",
+      "face": {
+        "type": "artificial",
+        "modelType": "pokemon",
+        "identifier": "cobblemon:pikachu",
+        "aspects": [
+          "shiny"
+        ]
+      }
+    },
+    "player": {
+      "face": "q.player.face();",
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "mobi",
+      "speaker": "grunt1",
+      "lines": [
+          "What's up, Mr. Gym Leader? Me and my buddy have a message straight from our boss."
+      ]
+    },
+    {
+      "id": "mobi0",
+      "speaker": "mobi0",
+      "lines": [
+          "Team What? What do you want with me?"
+      ]
+    },
+    {
+      "id": "mobi1",
+      "speaker": "grunt1",
+      "lines": [
+          "Our boss heard about your past exploits, Mr. Mobi. The whole organized crime shebang."
+      ]
+    },
+    {
+      "id": "mobi2",
+      "speaker": "mobi",
+      "lines": [
+          "If your boss knows as much about me as he claims, he should know that sending you here was nothing but a fool's errand! I left that life behind."
+      ]
+    },
+    {
+      "id": "mobi3",
+      "speaker": "grunt1",
+      "lines": [
+          "Really? Your grip on Yache City suggests otherwise."
+      ]
+    },
+    {
+      "id": "mobi3",
+      "speaker": "mobi",
+      "lines": [
+          "I am protecting Yache City from people like you. Hooligans, indeed. Leave Yache City at once!"
+      ]
+    },
+    {
+      "id": "mobi4",
+      "speaker": "grunt2",
+      "lines": [
+          "That ain't very nice, Pops."
+      ]
+    },
+    {
+      "id": "mobi5",
+      "speaker": "mobi",
+      "lines": [
+          "Do not lie to me, boy. If you think you can strongarm me into joining your so-called team, you are beyond foolish."
+      ]
+    },
+    {
+      "id": "mobi6",
+      "speaker": "grunt1",
+      "lines": [
+          "We don't think we can, Mr. Gym Leader. You're going to join us. Otherwise, we might just have to break some stuff…"
+      ]
+    },
+    {
+      "id": "mobi7",
+      "speaker": "mobi",
+      "input": "q.dialogue.close();",      
+      "lines": [
+          "Foolish, indeed! You, there. Help me teach these hooligans a lesson!"
+      ],
+	  "input": "q.dialogue.close();"
+    },
+    {
+      "id": "quitter",
+      "speaker": "player",
+      "lines": ["What was I supposed to do?!??"],
+      "input": "q.dialogue.close();",
+      "escapeAction": "q.dialogue.close();"
+    }
+  ]
+}

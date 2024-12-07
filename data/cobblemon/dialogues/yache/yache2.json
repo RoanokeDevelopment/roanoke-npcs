@@ -1,0 +1,62 @@
+{
+  "escapeAction": "q.dialogue.set_page('quitter')",
+  "speakers": {
+    "mobi": {
+      "name": "Mobi",
+      "face": {
+        "type": "artificial",
+        "modelType": "pokemon",
+        "identifier": "cobblemon:pikachu",
+        "aspects": [
+          "shiny"
+        ]
+      }
+    },
+    "player": {
+      "face": "q.player.face();",
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "mobi",
+      "speaker": "mobi",
+      "lines": [
+          "Hmph. I very much doubt that. Ah. Thank you for your help, friend. Tell me, what is your name?"
+      ]
+    },
+    {
+      "id": "mobi0",
+      "speaker": "player",
+      "lines": [
+          "You're gym leader Mobi, right?"
+      ]
+    },
+    {
+      "id": "mobi1",
+      "speaker": "mobi",
+      "lines": [
+          "Correct. As you no doubt heard from those Raskull Ruffians, I used to lead a wildly different life, but that is behind me. Make no mistake, I still use the… skills, let's say, that I acquired during my more adventurous years, but I am making sure to stay above board, so to speak."
+      ]
+    },
+    {
+      "id": "mobi2",
+      "speaker": "mobi",
+      "input": "q.dialogue.close();",      
+      "lines": [
+          "But enough about me. You would like to battle, yes? I will accept your challenge. Meet me at my Gym when you're ready."
+      ],
+	  "input": "q.dialogue.close();"
+    },
+    {
+      "id": "quitter",
+      "speaker": "player",
+      "lines": ["What was I supposed to do?!??"],
+      "input": "q.dialogue.close();",
+      "escapeAction": "q.dialogue.close();"
+    }
+  ]
+}
