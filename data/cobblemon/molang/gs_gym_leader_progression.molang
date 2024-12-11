@@ -1,9 +1,9 @@
 'Executes when a gym leader is defeated.';
 
-q.player.data.gym_stage >= 18 ? {
-    'This will only execute if the value is 18 or over';
-    q.player.data.gym_stage = 18;
-    q.print('You have already obtained 18 gym badges');
+q.player.data.gym_stage >= 8 ? {
+    'This will only execute if the value is 8 or over';
+    q.player.data.gym_stage = 8;
+    q.print('You have already obtained 8 gym badges');
 } : {
     q.player.data.gym_stage = q.player.data.gym_stage + 1;
 };

@@ -5,16 +5,14 @@
     "Flying Gym Leader"
   ],
   "presets": [
-    "cobblemon:battler_test",
     "cobblemon:battler_commands",
     "cobblemon:battler_cooldown",
     "cobblemon:battler_scripts",
-    "cobblemon:looks",
     "cobblemon:stays_put"
   ],
   "interaction": {
     "type": "dialogue",
-    "dialogue": "cobblemon:flying_gym_interaction"
+    "dialogue": "cobblemon:gym_interaction"
   },
   "battleConfiguration": {
     "canChallenge": true
@@ -26,6 +24,13 @@
       "description": "npc.variable.on_player_wins.desc",
       "type": "TEXT",
       "defaultValue": "v.player.set_npc_variable(v.npc, 'defeated', true);"
+    },
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "npc.variable.challenge_cooldown.name",
+      "description": "npc.variable.challenge_cooldown.desc",
+      "type": "NUMBER",
+      "defaultValue": "24000"
     }
   ],
   "canDespawn": false,

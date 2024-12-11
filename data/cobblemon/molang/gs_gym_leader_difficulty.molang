@@ -1,17 +1,17 @@
 'Checks gym progression';
 
-'When the player has 0-5 gym badges';
-q.player.data.gym_stage < 6 ? {
+'When the player has 0-2 gym badges';
+q.player.data.gym_stage < 3 ? {
     return 'EASY';
 };
 
-'When the player has 6-11 gym badges';
-q.player.data.gym_stage < 12 && q.player.data.gym_stage > 5 ? {
+'When the player has 3-5 gym badges';
+q.player.data.gym_stage < 6 && q.player.data.gym_stage > 2 ? {
     return 'MEDIUM';
 };
 
-'When the player has 12-17 gym badges';
-q.player.data.gym_stage < 18 && q.player.data.gym_stage > 11 ? {
+'When the player has 5-8 gym badges';
+q.player.data.gym_stage < 8 && q.player.data.gym_stage > 5 ? {
     return 'HARD';
 };
 

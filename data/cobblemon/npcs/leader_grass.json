@@ -1,8 +1,8 @@
 {
   "hitbox": "player",
-  "resourceIdentifier": "cobblemon:darkleader",    
+  "resourceIdentifier": "cobblemon:leader_grass",    
   "names": [
-    "Dark Gym Leader"
+    "Grass Gym Leader"
   ],
   "presets": [
     "cobblemon:battler_commands",
@@ -18,6 +18,13 @@
     "canChallenge": true
   },
   "config": [
+    {
+      "variableName": "player_win_command",
+      "displayName": "npc.variable.player_win_command.name",
+      "description": "npc.variable.player_win_command.desc",
+      "type": "TEXT",
+      "defaultValue": "give {{player}} cobblemon:exp_candy_l 2"
+    },
     {
       "variableName": "on_player_wins",
       "displayName": "npc.variable.on_player_wins.name",
@@ -56,7 +63,7 @@
   "skill": 5,
   "party": {
     "type": "script",
-    "script": "cobblemon:pb_dark_leader",
+    "script": "cobblemon:pb_leader_grass",
     "isStatic": false
   }
 }
